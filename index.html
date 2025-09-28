@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selamat Ulang Tahun</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root{
+      --bg:#03045E;
+      --card:#0077B6;
+      --accent:#0077B6;
+      --muted:#90E0EF;
+      --radius:14px;
+      --max:900px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,var(--bg), white 100%);
+      color:#fff;
+      line-height:1.5;
+    }
+    .wrap{
+      max-width:var(--max);
+      margin:40px auto;
+      padding:28px;
+    }
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .logo{
+      font-size:40px;
+    }
+    h1{
+      font-size:36px;margin:16px 0 8px 0;color:#fff
+    }
+    p.lead{color:var(--muted);margin:0 0 18px 0;font-size:18px}
+    .card{
+      background: rgba(255,255,255,0.1);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .btn{
+      padding:12px 20px;border-radius:12px;border:0;cursor:pointer;font-weight:600;font-size:16px;
+    }
+    .btn-primary{background:var(--accent);color:#fff}
+    .preview{margin-top:18px;}
+    .preview img{
+      max-width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)
+    }
+    footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎉</div>
+      <h1>SELAMATT ULANG TAHUNN <span id="namaOrang">RAISYAA</span>!</h1>
+      <p class="lead">Hari ini kamu ulang tahun ke yangg <span id="umur">14 Tahun</span></p>
+    </header>
+
+    <div class="card">
+      <h2>HAIIII</h2>
+      <div class="preview">
+        <img src="548789123_1893680314697189_1796154139890943506_n.jpg" alt="Foto Ulang Tahun">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>SELAMATT ULANG TAHUNNNN ORANG LUCUU</h2>
+      <p class="lead" id="ucapan">Di klikk tuhh tombol yangg dibawahh</p>
+      <button class="btn btn-primary" onclick="tampilUcapan()">heiii klikk akuu</button>
+    </div>
+
+    <footer>
+      dibuatt untukk raisyaa
+    </footer>
+  </div>
+
+  <script>
+    function tampilUcapan(){
+      alert("hiii selamattt ulang tahunn yaa kakaa lelee, semogaa kamu jadii pribadi yang lebihh baikk lagii yaa dann semoga kamu menjadii lebih pinterr, cantikk. akuu cumaa ngasihh inii ajaa gapapaa yaaa, selamatt ulang tahunnn lagiii");
+    }
+  </script>
+</body>
+</html>
