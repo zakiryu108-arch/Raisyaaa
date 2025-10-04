@@ -1,62 +1,155 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Selamat Ulang Tahun</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root{
-      --bg:#03045E;
-      --card:#0077B6;
-      --accent:#0077B6;
-      --muted:#90E0EF;
-      --radius:14px;
-      --max:900px;
+    :root {
+      --card: #0077B6;
+      --accent: #0077B6;
+      --muted: #90E0EF;
+      --radius: 14px;
+      --max: 900px;
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background: linear-gradient(180deg,var(--bg), white 100%);
-      color:#fff;
-      line-height:1.5;
+
+    * {
+      box-sizing: border-box
     }
-    .wrap{
-      max-width:var(--max);
-      margin:40px auto;
-      padding:28px;
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #03045E, #0077B6, #00B4D8, #90E0EF);
+      min-height: 100vh;
     }
-    header{
-      text-align:center;
-      margin-bottom:28px;
+
+    .wrap {
+      max-width: var(--max);
+      margin: 40px auto;
+      padding: 28px;
     }
-    .logo{
-      font-size:40px;
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
     }
-    h1{
-      font-size:36px;margin:16px 0 8px 0;color:#fff
+
+    .logo {
+      font-size: 40px;
     }
-    p.lead{color:var(--muted);margin:0 0 18px 0;font-size:18px}
-    .card{
-      background: rgba(255,255,255,0.1);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      text-align:center;
-      margin-bottom:28px;
+
+    h1 {
+      font-size: 36px;
+      margin: 16px 0 8px 0;
+      color: #fff
     }
-    .btn{
-      padding:12px 20px;border-radius:12px;border:0;cursor:pointer;font-weight:600;font-size:16px;
+
+    p.lead {
+      color: var(--muted);
+      margin: 0 0 18px 0;
+      font-size: 18px
     }
-    .btn-primary{background:var(--accent);color:#fff}
-    .preview{margin-top:18px;}
-    .preview img{
-      max-width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      margin-bottom: 28px;
+      color: #fff;
     }
-    footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center}
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff
+    }
+
+    .preview {
+      margin-top: 18px;
+    }
+
+    .preview img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6)
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center
+    }
+
+    /* POPUP */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .popup {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .popup p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 18px
+    }
+
+    .popup button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -74,19 +167,45 @@
 
     <div class="card">
       <h2>SELAMATT ULANG TAHUNNNN ORANG LUCUU</h2>
-      <p class="lead" id="ucapan">Di klikk tuhh tombol yangg dibawahh</p>
+      <p class="lead-1" id="ucapan">Di klikk tuhh tombol yangg dibawahh</p>
       <button class="btn btn-primary" onclick="tampilUcapan()">heiii klikk akuu</button>
     </div>
 
-    <footer>
-      dibuatt untukk raisyaa
+    <div class="card foto-bawah">
+      <img src="543707478_1460696635166192_1412349072705032463_n.jpg" alt="Foto Tambahan" />
+    </div>
+
+
+    <div class="card foto-bawah">
+      <img src="Gambar WhatsApp 2025-10-04 pukul 13.22.08_564eb8c1.jpg" alt="Foto Tambahan" />
+    </div>
+
+    <footer class="footer">
+      <h2>LUCUU BANGETT KAMUU</h2>
     </footer>
   </div>
 
+  <!-- POPUP -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <p>
+        hiii selamat ulang tahunn yaa kakaa lelee
+        semogaa kamu jadi pribadi yang lebih baik lagi,
+        lebih pinter, cantik, bahagia selamanyaaaa
+        aku cuma bisa ngasih ini ajaa, semoga sukaa! 🎂
+      </p>
+      <button onclick="tutupPopup()">OK</button>
+    </div>
+  </div>
+
   <script>
-    function tampilUcapan(){
-      alert("hiii selamattt ulang tahunn yaa kakaa lelee, semogaa kamu jadii pribadi yang lebihh baikk lagii yaa dann semoga kamu menjadii lebih pinterr, cantikk. akuu cumaa ngasihh inii ajaa gapapaa yaaa, selamatt ulang tahunnn lagiii");
+    function tampilUcapan() {
+      document.getElementById("popupOverlay").style.display = "flex";
+    }
+    function tutupPopup() {
+      document.getElementById("popupOverlay").style.display = "none";
     }
   </script>
 </body>
+
 </html>
